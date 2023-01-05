@@ -27,6 +27,7 @@ class Test_StemmerTest(unittest.TestCase):
                 # sastrawi additional rules
                 'taat', 'tiru', 'sepak', 'kuasa', 'malaikat', 'nikmat', 'stabil', 'transkripsi',
                 'lewat', 'nganga', 'allah',
+                'baris', 'ramai', 'analogi', 'tumis', 'tangis', 'lapis',
             ]
         )
         self.stemmer = Stemmer(self.dictionary)
@@ -369,7 +370,15 @@ class Test_StemmerTest(unittest.TestCase):
         data.append(['malaikat-malaikat-Nya', 'malaikat'])
         data.append(['nikmat-Ku', 'nikmat'])
         data.append(['allah-lah', 'allah'])
-
+        
+        data.append(['beramai-ramai', 'ramai'])
+        data.append(['beranalogi', 'analogi'])
+        
+        data.append(['baris-berbaris', 'baris'])
+        data.append(['ditumis', 'tumis'])
+        data.append(['menangis', 'tangis'])
+        data.append(['pelapis', 'lapis'])
+        
         return data
 
     def test_All(self):
